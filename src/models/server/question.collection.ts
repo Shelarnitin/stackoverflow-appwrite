@@ -25,5 +25,24 @@ export default async function createQuestionCollection(){
     databases.createStringAttribute(db, questionCollection, "attachmentId", 50, false),
   ]);
   console.log("Question Attributes created")
-
+/*
+  await Promise.all([
+    databases.createIndex(
+      db,
+      questionCollection,
+      "title",
+      IndexType.Fulltext,
+      ["title"],
+      ['asc']
+    ),
+    databases.createIndex(
+      db,
+      questionCollection,
+      "content",
+      IndexType.Fulltext,
+      ["content"],
+      ['asc']
+    )
+  ])
+*/
 }
