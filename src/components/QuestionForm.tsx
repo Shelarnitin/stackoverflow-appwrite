@@ -210,11 +210,12 @@ const QuestionForm = ({ question }: { question?: QuestionDocument }) => {
           </small>
         </Label>
         <RTE
-          value={formData.content}
-          onChange={(value: string) =>
-            setFormData((prev) => ({ ...prev, content: value || "" }))
-          }
+            value={formData.content}
+            onChange={(value?: string) =>
+            setFormData((prev) => ({ ...prev, content: value ?? "" }))
+            }
         />
+
       </LabelInputContainer>
 
       {/* Image Upload */}
